@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Итоговая работа</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script>
+        let obj = {
+        surname: 'Махеева',
+        name:'Татьяна',
+        patronymic:'Александровна',
+        ocupation:'Преподаватель специальных дисциплин',
+        degree: 'Высшее',
+        education: 'Московский государственный институт электронной техники (технический университет)',
+        qualification: 'Инженер-программист инфокоммуникационных систем',
+        specialty:'Программное обеспечение радиоэлектронных систем',
+        discipline:['Основы алгоритмизации и программирования', 'Компьютерная графика'],
+        category: prompt('Категория преподавателя:', 'Первая'),
+        experience: prompt('Стаж работы', '13 лет'),
+        email: prompt('Электронная почта','pechora-email@yandex.ru'),
+        site: prompt('Персональный сайт','hz.ru'),
+        };
+	</script>
+</head>
+<body>
+    <div class="row menu">
+        <div class="col-3"></div>
+        <div class="col textmenu"><b>О проекте</b></div>
+        <div class="col textmenu"><b>Курсы</b></div>
+        <div class="col textmenu"><b>Преподаватели</b></div>
+        <div class="col textmenu"><b>Контакты</b></div>
+        <div class="col-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-4"><img src="images/no-image.jpg"></div>
+        <div class="col-6">
+            <section class="info">
+                <script class="script">
+
+                let line = `
+                <h1> ${obj.surname} ${obj.name} ${obj.patronymic}</h1> 
+                <h3>${obj.ocupation}</h3>
+                <p><b>Основная информация:</b></p>
+                <ul>
+                    <li><b>Уровень образования:</b> ${obj.degree}</li>
+                    <li><b>Образование:</b> ${obj.education}</li> 
+                    <li><b>Квалификация:</b> ${obj.qualification}</li> 
+                    <li><b>Специализация:</b> ${obj.specialty}</li>
+                    <li><b>Преподаваемые дисциплины:</b> 
+                        <ul>
+                            <li>${obj.discipline[0]}</li>
+                            <li>${obj.discipline[1]}</li>
+                        </ul>
+                </ul>;
+                <p><h3>Дополнительная информация</h3>
+                    <ul>
+                        <li><b>Категория:</b>${obj.category}</li>
+                        <li><b>Стаж:</b>${obj.experience}</li>
+                        <li><b>Электронная почта:</b>${obj.email}</li>
+                        <li><b>Персональный сайт:</b>${obj.site}</li>
+                    </ul>
+                </p>
+                `;
+                document.write(line);
+                </script>
+            </section>
+        </div>
+        <div class="col-1"></div>
+    </div>
+</body>
+</html>
